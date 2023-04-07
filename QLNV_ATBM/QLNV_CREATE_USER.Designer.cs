@@ -201,7 +201,7 @@ namespace QLNV_ATBM
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(128, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 67;
             this.label2.Text = "Password";
             // 
@@ -210,7 +210,7 @@ namespace QLNV_ATBM
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(128, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 17);
+            this.label1.Size = new System.Drawing.Size(100, 16);
             this.label1.TabIndex = 66;
             this.label1.Text = "New user name";
             // 

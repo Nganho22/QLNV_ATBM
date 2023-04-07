@@ -159,6 +159,7 @@ namespace QLNV_ATBM
             this.button1.TabIndex = 12;
             this.button1.Text = "list of users";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button12
             // 
@@ -184,7 +185,7 @@ namespace QLNV_ATBM
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(245, 466);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(476, 32);
+            this.label1.Size = new System.Drawing.Size(475, 32);
             this.label1.TabIndex = 63;
             this.label1.Text = "HE THONG QUAN LY NHAN VIEN";
             // 

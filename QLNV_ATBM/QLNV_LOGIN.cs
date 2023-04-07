@@ -3,18 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Net;
 using System.Linq;
 using System.Text;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OracleClient;
+using Oracle.VsDevTools;
+using Oracle.ManagedDataAccess.Client;
 
 
 namespace QLNV_ATBM
 {
     public partial class QLNV_LOGIN : Form
     {
-        OracleConnection con = new OracleConnection(@"Uid=NGAN;password=TN050102");
+
+        OracleConnection conn;
         public QLNV_LOGIN()
         {
             InitializeComponent();
@@ -22,13 +26,35 @@ namespace QLNV_ATBM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            OracleCommand cmd = new OracleCommand("select * from DA_TABLE_NHANVIEN");
-            cmd.ExecuteNonQuery();
-            con.Close();
+            //QLNV_MENU tamga = new QLNV_MENU();
+            //tamga.Show();
+            string UconnectDBOracle = @"Data source = localhost:1521/xe;" + " USER ID = " + textBox1.Text + "; Password = " + textBox2.Text + ";";
+            try
+            {
+                conn = new OracleConnection(UconnectDBOracle);
+                conn.Open();
+                QLNV_MENU menu = new QLNV_MENU(conn);
+                menu.ShowDialog();
+                //MessageBox.Show("Dang nhap thanh cong!");
+                //conn.Close();
+                this.Hide();
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show("ERROR!" + exp.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
