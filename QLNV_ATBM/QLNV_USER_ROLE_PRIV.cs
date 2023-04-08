@@ -134,10 +134,14 @@ namespace QLNV_ATBM
             command.Parameters.Add("p_table_output", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
             command.Parameters.Add("p_table_output2", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
             OracleDataAdapter adapter = new OracleDataAdapter(command);
-            DataTable ds = new DataTable();
-            adapter.Fill(ds);
-            
-            dataGridView1.DataSource = ds;
+            DataSet ds1 = new DataSet();
+            adapter.Fill(ds1);
+            DataTable dt1 = ds1.Tables[0];
+            DataTable dt2 = ds1.Tables[1];
+
+            dt1.Merge(dt2);
+
+            dataGridView1.DataSource = dt1;
 
             dataGridView1.AutoResizeRows();
             dataGridView1.AutoResizeColumns();
