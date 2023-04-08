@@ -74,6 +74,7 @@ namespace QLNV_ATBM
             this.button12.TabIndex = 50;
             this.button12.Text = "add col";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -83,6 +84,7 @@ namespace QLNV_ATBM
             this.button11.TabIndex = 49;
             this.button11.Text = "create view";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -92,6 +94,7 @@ namespace QLNV_ATBM
             this.button10.TabIndex = 48;
             this.button10.Text = "create role";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -101,6 +104,7 @@ namespace QLNV_ATBM
             this.button9.TabIndex = 47;
             this.button9.Text = "create user";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -110,6 +114,7 @@ namespace QLNV_ATBM
             this.button8.TabIndex = 46;
             this.button8.Text = "create table";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -119,6 +124,7 @@ namespace QLNV_ATBM
             this.button7.TabIndex = 45;
             this.button7.Text = "add priv";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -128,6 +134,7 @@ namespace QLNV_ATBM
             this.button6.TabIndex = 44;
             this.button6.Text = "revoke priv";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -137,6 +144,7 @@ namespace QLNV_ATBM
             this.button5.TabIndex = 43;
             this.button5.Text = "user/role privileges";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -146,6 +154,7 @@ namespace QLNV_ATBM
             this.button4.TabIndex = 42;
             this.button4.Text = "list of views";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -155,6 +164,7 @@ namespace QLNV_ATBM
             this.button3.TabIndex = 41;
             this.button3.Text = "list of tables";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -164,6 +174,7 @@ namespace QLNV_ATBM
             this.button2.TabIndex = 40;
             this.button2.Text = "list of roles";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -174,6 +185,7 @@ namespace QLNV_ATBM
             this.button1.TabIndex = 39;
             this.button1.Text = "list of users";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button13
             // 
@@ -210,7 +222,7 @@ namespace QLNV_ATBM
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(130, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 17);
+            this.label3.Size = new System.Drawing.Size(99, 16);
             this.label3.TabIndex = 68;
             this.label3.Text = "Type of column";
             // 
@@ -219,7 +231,7 @@ namespace QLNV_ATBM
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(130, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 17);
+            this.label2.Size = new System.Drawing.Size(117, 16);
             this.label2.TabIndex = 67;
             this.label2.Text = "New column name";
             // 
@@ -228,7 +240,7 @@ namespace QLNV_ATBM
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(130, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 17);
+            this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 66;
             this.label1.Text = "Table name";
             // 
@@ -240,6 +252,7 @@ namespace QLNV_ATBM
             this.button14.TabIndex = 73;
             this.button14.Text = "add role";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // QLNV_ADD_COL
             // 

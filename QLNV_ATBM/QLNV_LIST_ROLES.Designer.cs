@@ -55,6 +55,7 @@ namespace QLNV_ATBM
             this.button12.TabIndex = 37;
             this.button12.Text = "add col";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -64,6 +65,7 @@ namespace QLNV_ATBM
             this.button11.TabIndex = 35;
             this.button11.Text = "create view";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -73,6 +75,7 @@ namespace QLNV_ATBM
             this.button10.TabIndex = 34;
             this.button10.Text = "create role";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -82,6 +85,7 @@ namespace QLNV_ATBM
             this.button9.TabIndex = 33;
             this.button9.Text = "create user";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -91,6 +95,7 @@ namespace QLNV_ATBM
             this.button8.TabIndex = 32;
             this.button8.Text = "create table";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -100,6 +105,7 @@ namespace QLNV_ATBM
             this.button7.TabIndex = 31;
             this.button7.Text = "add priv";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -109,6 +115,7 @@ namespace QLNV_ATBM
             this.button6.TabIndex = 30;
             this.button6.Text = "revoke priv";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -118,6 +125,7 @@ namespace QLNV_ATBM
             this.button5.TabIndex = 29;
             this.button5.Text = "user/role privileges";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -127,6 +135,7 @@ namespace QLNV_ATBM
             this.button4.TabIndex = 28;
             this.button4.Text = "list of views";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -136,6 +145,7 @@ namespace QLNV_ATBM
             this.button3.TabIndex = 27;
             this.button3.Text = "list of tables";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -146,6 +156,7 @@ namespace QLNV_ATBM
             this.button2.TabIndex = 26;
             this.button2.Text = "list of roles";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -156,9 +167,12 @@ namespace QLNV_ATBM
             this.button1.TabIndex = 25;
             this.button1.Text = "list of users";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(137, 25);
@@ -176,6 +190,7 @@ namespace QLNV_ATBM
             this.button14.TabIndex = 62;
             this.button14.Text = "add role";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // QLNV_LIST_ROLES
             // 
@@ -199,6 +214,7 @@ namespace QLNV_ATBM
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QLNV_LIST_ROLES";
             this.Text = "QLNV_LIST_ROLES";
+            this.Load += new System.EventHandler(this.QLNV_LIST_ROLES_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

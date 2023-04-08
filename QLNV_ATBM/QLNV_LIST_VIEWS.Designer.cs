@@ -66,6 +66,7 @@ namespace QLNV_ATBM
             this.button12.TabIndex = 50;
             this.button12.Text = "add col";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -75,6 +76,7 @@ namespace QLNV_ATBM
             this.button11.TabIndex = 49;
             this.button11.Text = "create view";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -84,6 +86,7 @@ namespace QLNV_ATBM
             this.button10.TabIndex = 48;
             this.button10.Text = "create role";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -93,6 +96,7 @@ namespace QLNV_ATBM
             this.button9.TabIndex = 47;
             this.button9.Text = "create user";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -102,6 +106,7 @@ namespace QLNV_ATBM
             this.button8.TabIndex = 46;
             this.button8.Text = "create table";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -111,6 +116,7 @@ namespace QLNV_ATBM
             this.button7.TabIndex = 45;
             this.button7.Text = "add priv";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -120,6 +126,7 @@ namespace QLNV_ATBM
             this.button6.TabIndex = 44;
             this.button6.Text = "revoke priv";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -129,6 +136,7 @@ namespace QLNV_ATBM
             this.button5.TabIndex = 43;
             this.button5.Text = "user/role privileges";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -139,6 +147,7 @@ namespace QLNV_ATBM
             this.button4.TabIndex = 42;
             this.button4.Text = "list of views";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -148,6 +157,7 @@ namespace QLNV_ATBM
             this.button3.TabIndex = 41;
             this.button3.Text = "list of tables";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -158,6 +168,7 @@ namespace QLNV_ATBM
             this.button1.TabIndex = 39;
             this.button1.Text = "list of users";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button13
             // 
@@ -167,6 +178,7 @@ namespace QLNV_ATBM
             this.button13.TabIndex = 52;
             this.button13.Text = "list of roles";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -176,6 +188,7 @@ namespace QLNV_ATBM
             this.button14.TabIndex = 62;
             this.button14.Text = "add role";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // QLNV_LIST_VIEWS
             // 
@@ -199,6 +212,7 @@ namespace QLNV_ATBM
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QLNV_LIST_VIEWS";
             this.Text = "QLNV_LIST_VIEWS";
+            this.Load += new System.EventHandler(this.QLNV_LIST_VIEWS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
