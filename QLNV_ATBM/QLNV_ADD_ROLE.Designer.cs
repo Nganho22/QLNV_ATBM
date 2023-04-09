@@ -51,6 +51,7 @@ namespace QLNV_ATBM
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,15 +74,16 @@ namespace QLNV_ATBM
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 83;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(127, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 16);
+            this.label4.Size = new System.Drawing.Size(113, 16);
             this.label4.TabIndex = 82;
-            this.label4.Text = "With grant option";
+            this.label4.Text = "With admin option";
             // 
             // button13
             // 
@@ -91,6 +93,7 @@ namespace QLNV_ATBM
             this.button13.TabIndex = 81;
             this.button13.Text = "ADD";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // textBox2
             // 
@@ -98,6 +101,7 @@ namespace QLNV_ATBM
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(526, 22);
             this.textBox2.TabIndex = 79;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -105,6 +109,7 @@ namespace QLNV_ATBM
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(526, 22);
             this.textBox1.TabIndex = 78;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -126,9 +131,11 @@ namespace QLNV_ATBM
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(127, 233);
+            this.dataGridView1.Location = new System.Drawing.Point(127, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -256,11 +263,21 @@ namespace QLNV_ATBM
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(128, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 16);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "List of Role that User has";
+            // 
             // QLNV_ADD_ROLE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 583);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.checkBox1);
@@ -315,5 +332,6 @@ namespace QLNV_ATBM
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label label3;
     }
 }

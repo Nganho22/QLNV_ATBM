@@ -130,7 +130,7 @@ namespace QLNV_ATBM
             conn.Open();
             OracleCommand command = new OracleCommand();
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "GRANT_PRIV_TO_USER";
+            command.CommandText = "NGAN.GRANT_PRIV_TO_USER";
             command.Connection = conn;
             command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
             command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox2.Text;

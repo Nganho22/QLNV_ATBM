@@ -128,7 +128,7 @@ namespace QLNV_ATBM
         {
             OracleCommand command = new OracleCommand();
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "SEE_USER_ROLE_PRIVS";
+            command.CommandText = "NGAN.SEE_USER_ROLE_PRIVS";
             command.Connection = conn;
             command.Parameters.Add("p_input", OracleDbType.Varchar2).Value = textBox1.Text;
             command.Parameters.Add("p_table_output", OracleDbType.RefCursor).Direction = ParameterDirection.Output;

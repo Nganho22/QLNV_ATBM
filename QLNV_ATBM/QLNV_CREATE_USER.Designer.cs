@@ -54,6 +54,8 @@ namespace QLNV_ATBM
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(128, 119);
@@ -193,6 +195,7 @@ namespace QLNV_ATBM
             this.button13.TabIndex = 72;
             this.button13.Text = "CREATE";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // textBox2
             // 
@@ -200,6 +203,7 @@ namespace QLNV_ATBM
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(526, 22);
             this.textBox2.TabIndex = 70;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -207,6 +211,7 @@ namespace QLNV_ATBM
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(526, 22);
             this.textBox1.TabIndex = 69;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 

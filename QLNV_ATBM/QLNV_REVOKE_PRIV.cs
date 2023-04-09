@@ -140,7 +140,7 @@ namespace QLNV_ATBM
             conn.Open();
             OracleCommand command = new OracleCommand();
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "REVOKE_PRIV";
+            command.CommandText = "NGAN.REVOKE_PRIV";
             command.Connection = conn;
             command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox2.Text;
             command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox3.Text;

@@ -45,7 +45,7 @@ namespace QLNV_ATBM
         {
             OracleCommand command = new OracleCommand();
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "SEE_TABLE";
+            command.CommandText = "NGAN.SEE_TABLE";
             command.Connection = conn;
             OracleParameter param = new OracleParameter();
             command.Parameters.Add("p_table_output", OracleDbType.RefCursor).Direction = ParameterDirection.Output;

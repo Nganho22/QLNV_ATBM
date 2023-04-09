@@ -8,25 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QLNV_ATBM
 {
-    public partial class QLNV_CREATE_TABLE : Form
+    public partial class QLNV_DROP : Form
     {
         private OracleConnection conn;
-        public QLNV_CREATE_TABLE(OracleConnection conn)
+        public QLNV_DROP(OracleConnection conn)
         {
             InitializeComponent();
             this.conn = conn;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void QLNV_DROP_Load(object sender, EventArgs e)
         {
 
         }
@@ -133,41 +127,6 @@ namespace QLNV_ATBM
             QLNV_ADD_ROLE USER = new QLNV_ADD_ROLE(conn);
             USER.ShowDialog();
             this.Hide();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-            OracleCommand command = new OracleCommand();
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "NGAN.CREATE_TABLE";
-            command.Connection = conn;
-            command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
-            command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox2.Text;
-            command.Parameters.Add("p_input3", OracleDbType.Varchar2).Value = textBox3.Text;
-            command.Parameters.Add("p_output", OracleDbType.Varchar2, 200).Direction = ParameterDirection.Output;
-            OracleCommand command2 = new OracleCommand("ALTER SESSION SET \"_ORACLE_SCRIPT\" = TRUE", conn);
-            command2.ExecuteNonQuery();
-            command.ExecuteNonQuery();
-            string outputValue = command.Parameters["p_output"].Value.ToString();
-            MessageBox.Show(outputValue);
-            conn.Close();
-
         }
     }
 }

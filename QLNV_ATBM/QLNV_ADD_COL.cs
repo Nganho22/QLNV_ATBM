@@ -126,5 +126,48 @@ namespace QLNV_ATBM
             USER.ShowDialog();
             this.Hide();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.ADD_COLUMN";
+            command.Connection = conn;
+            command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
+            command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox2.Text;
+            command.Parameters.Add("p_input3", OracleDbType.Varchar2).Value = textBox3.Text;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 200).Direction = ParameterDirection.Output;
+            command.Parameters.Add("p_table_output", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            OracleCommand command2 = new OracleCommand("ALTER SESSION SET \"_ORACLE_SCRIPT\" = TRUE", conn);
+            command2.ExecuteNonQuery();
+            DataSet ds = new DataSet();
+            OracleDataAdapter adapter = new OracleDataAdapter(command);
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            adapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            dataGridView1.AutoResizeRows();
+            dataGridView1.AutoResizeColumns();
+            conn.Close();
+           
+            MessageBox.Show(outputValue);
+            conn.Close();
+        }
     }
 }

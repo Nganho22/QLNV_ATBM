@@ -156,6 +156,12 @@
     <Compile Include="QLNV_CREATE_VIEW.Designer.cs">
       <DependentUpon>QLNV_CREATE_VIEW.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLNV_DROP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_DROP.Designer.cs">
+      <DependentUpon>QLNV_DROP.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLNV_LIST_ROLES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLNV_CREATE_VIEW.resx">
       <DependentUpon>QLNV_CREATE_VIEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_DROP.resx">
+      <DependentUpon>QLNV_DROP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNV_LIST_ROLES.resx">
       <DependentUpon>QLNV_LIST_ROLES.cs</DependentUpon>
