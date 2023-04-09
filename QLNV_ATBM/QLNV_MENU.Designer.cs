@@ -45,6 +45,7 @@ namespace QLNV_ATBM
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,11 +200,22 @@ namespace QLNV_ATBM
             this.label1.TabIndex = 63;
             this.label1.Text = "HE THONG QUAN LY NHAN VIEN";
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(145, 535);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(93, 39);
+            this.button13.TabIndex = 64;
+            this.button13.Text = "drop";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // QLNV_MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 583);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button12);
@@ -246,5 +258,6 @@ namespace QLNV_ATBM
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button13;
     }
 }

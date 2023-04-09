@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLNV_ATBM
 {
@@ -129,6 +131,29 @@ namespace QLNV_ATBM
         private void QLNV_MENU_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.GET_CUR_USER";
+            command.Connection = conn;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 100).Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            conn.Close();
+            if (outputValue == "NGAN")
+            {
+                QLNV_DROP USER = new QLNV_DROP(conn);
+                USER.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("YOU DON'T HAVE PERMISSION!");
+            }
+           
         }
     }
 }

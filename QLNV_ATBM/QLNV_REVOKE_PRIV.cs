@@ -161,5 +161,28 @@ namespace QLNV_ATBM
         {
 
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.GET_CUR_USER";
+            command.Connection = conn;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 100).Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            conn.Close();
+            if (outputValue == "NGAN")
+            {
+                QLNV_DROP USER = new QLNV_DROP(conn);
+                USER.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("YOU DON'T HAVE PERMISSION!");
+            }
+        }
     }
 }

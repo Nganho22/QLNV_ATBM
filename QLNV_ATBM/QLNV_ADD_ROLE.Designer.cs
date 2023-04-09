@@ -52,6 +52,7 @@ namespace QLNV_ATBM
             this.button1 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,7 +140,7 @@ namespace QLNV_ATBM
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 337);
+            this.dataGridView1.Size = new System.Drawing.Size(663, 322);
             this.dataGridView1.TabIndex = 74;
             // 
             // button12
@@ -272,11 +273,23 @@ namespace QLNV_ATBM
             this.label3.TabIndex = 86;
             this.label3.Text = "List of Role that User has";
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button7.Location = new System.Drawing.Point(127, 532);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(97, 44);
+            this.button7.TabIndex = 87;
+            this.button7.Text = "add role";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // QLNV_ADD_ROLE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 583);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
@@ -333,5 +346,6 @@ namespace QLNV_ATBM
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button7;
     }
 }

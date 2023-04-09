@@ -128,5 +128,52 @@ namespace QLNV_ATBM
             USER.ShowDialog();
             this.Hide();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string a = comboBox1.Text;
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.DROP_OBJECT";
+            command.Connection = conn;
+            command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
+            command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = a;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 200).Direction = ParameterDirection.Output;
+            OracleCommand command2 = new OracleCommand("ALTER SESSION SET \"_ORACLE_SCRIPT\" = TRUE", conn);
+            command2.ExecuteNonQuery();
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            MessageBox.Show(outputValue);
+            conn.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.GET_CUR_USER";
+            command.Connection = conn;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 100).Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            conn.Close();
+            if (outputValue == "NGAN")
+            {
+                QLNV_DROP USER = new QLNV_DROP(conn);
+                USER.ShowDialog();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("YOU DON'T HAVE PERMISSION!");
+            }
+        }
     }
 }
