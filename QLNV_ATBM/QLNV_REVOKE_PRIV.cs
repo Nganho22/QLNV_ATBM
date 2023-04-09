@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QLNV_ATBM
 {
@@ -132,6 +133,33 @@ namespace QLNV_ATBM
             QLNV_ADD_ROLE USER = new QLNV_ADD_ROLE(conn);
             USER.ShowDialog();
             this.Hide();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "REVOKE_PRIV";
+            command.Connection = conn;
+            command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox2.Text;
+            command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox3.Text;
+            command.Parameters.Add("p_input3", OracleDbType.Varchar2).Value = textBox1.Text;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 100).Direction = ParameterDirection.Output;
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            MessageBox.Show(outputValue);
+            conn.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
