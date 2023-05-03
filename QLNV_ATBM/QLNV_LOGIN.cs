@@ -34,10 +34,12 @@ namespace QLNV_ATBM
                 conn = new OracleConnection(UconnectDBOracle);
                 conn.Open();
                 QLNV_MENU menu = new QLNV_MENU(conn);
+                this.Hide();
+                conn.Close();
                 menu.ShowDialog();
                 //MessageBox.Show("Dang nhap thanh cong!");
                 //conn.Close();
-                this.Hide();
+                //this.Hide();
             }
             catch(Exception exp)
             {

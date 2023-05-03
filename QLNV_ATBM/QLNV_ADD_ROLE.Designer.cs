@@ -280,7 +280,7 @@ namespace QLNV_ATBM
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(97, 44);
             this.button7.TabIndex = 87;
-            this.button7.Text = "add role";
+            this.button7.Text = "drop";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
