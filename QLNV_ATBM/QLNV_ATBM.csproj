@@ -157,6 +157,12 @@
     <Compile Include="QLNV_DROP.Designer.cs">
       <DependentUpon>QLNV_DROP.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLNV_GIAMDOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_GIAMDOC.Designer.cs">
+      <DependentUpon>QLNV_GIAMDOC.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLNV_LIST_ROLES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,11 +193,59 @@
     <Compile Include="QLNV_MENU.Designer.cs">
       <DependentUpon>QLNV_MENU.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLNV_MYPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_MYPC.Designer.cs">
+      <DependentUpon>QLNV_MYPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_NHANSU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_NHANSU.Designer.cs">
+      <DependentUpon>QLNV_NHANSU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_NHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_NHANVIEN.Designer.cs">
+      <DependentUpon>QLNV_NHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_QUANLY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_QUANLY.Designer.cs">
+      <DependentUpon>QLNV_QUANLY.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLNV_REVOKE_PRIV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QLNV_REVOKE_PRIV.Designer.cs">
       <DependentUpon>QLNV_REVOKE_PRIV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_TAICHINH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_TAICHINH.Designer.cs">
+      <DependentUpon>QLNV_TAICHINH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_TONGGIAMDOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_TONGGIAMDOC.Designer.cs">
+      <DependentUpon>QLNV_TONGGIAMDOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_TRUONGDEAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_TRUONGDEAN.Designer.cs">
+      <DependentUpon>QLNV_TRUONGDEAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLNV_TRUONGPHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLNV_TRUONGPHONG.Designer.cs">
+      <DependentUpon>QLNV_TRUONGPHONG.cs</DependentUpon>
     </Compile>
     <Compile Include="QLNV_USER_ROLE_PRIV.cs">
       <SubType>Form</SubType>
@@ -239,6 +293,9 @@
     <EmbeddedResource Include="QLNV_DROP.resx">
       <DependentUpon>QLNV_DROP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_GIAMDOC.resx">
+      <DependentUpon>QLNV_GIAMDOC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLNV_LIST_ROLES.resx">
       <DependentUpon>QLNV_LIST_ROLES.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,8 +311,32 @@
     <EmbeddedResource Include="QLNV_MENU.resx">
       <DependentUpon>QLNV_MENU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_MYPC.resx">
+      <DependentUpon>QLNV_MYPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_NHANSU.resx">
+      <DependentUpon>QLNV_NHANSU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_NHANVIEN.resx">
+      <DependentUpon>QLNV_NHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_QUANLY.resx">
+      <DependentUpon>QLNV_QUANLY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLNV_REVOKE_PRIV.resx">
       <DependentUpon>QLNV_REVOKE_PRIV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_TAICHINH.resx">
+      <DependentUpon>QLNV_TAICHINH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_TONGGIAMDOC.resx">
+      <DependentUpon>QLNV_TONGGIAMDOC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_TRUONGDEAN.resx">
+      <DependentUpon>QLNV_TRUONGDEAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLNV_TRUONGPHONG.resx">
+      <DependentUpon>QLNV_TRUONGPHONG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNV_USER_ROLE_PRIV.resx">
       <DependentUpon>QLNV_USER_ROLE_PRIV.cs</DependentUpon>
