@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -8,14 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
-using System.Data.SqlClient;
-
 
 namespace QLNV_ATBM
 {
     public partial class QLNV_TONGGIAMDOC : Form
     {
-        private OracleConnection conn;
+        OracleConnection conn;
         public QLNV_TONGGIAMDOC(OracleConnection conn)
         {
             InitializeComponent();
@@ -27,17 +27,42 @@ namespace QLNV_ATBM
             conn.Open();
             OracleCommand command = new OracleCommand();
             command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "NGAN.SEE_TABLE";
+            command.CommandText = "NGAN.DA_PROC_SELECT_KEY";
             command.Connection = conn;
             OracleParameter param = new OracleParameter();
             command.Parameters.Add("p_table_output", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
             OracleDataAdapter adapter = new OracleDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            comboBox1.DataSource = table;
-            comboBox1.DisplayMember = "table";
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            dataGridView1.AutoResizeRows();
+            dataGridView1.AutoResizeColumns();
 
+
+            OracleCommand command2 = new OracleCommand();
+            command2.CommandType = CommandType.StoredProcedure;
+            command2.CommandText = "NGAN.DA_PROC_SELECT_DIARY";
+            command2.Connection = conn;
+            command2.Parameters.Add("p_table_output", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+            OracleDataAdapter adapter2 = new OracleDataAdapter(command2);
+            DataSet ds2 = new DataSet();
+            adapter2.Fill(ds2);
+            dataGridView2.DataSource = ds2.Tables[0];
+            dataGridView2.AutoResizeRows();
+            dataGridView2.AutoResizeColumns();
             conn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            QLNV_NHANVIEN USER = new QLNV_NHANVIEN(conn);
+            this.Hide();
+            USER.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

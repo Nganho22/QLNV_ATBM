@@ -146,6 +146,7 @@
             this.button2.TabIndex = 78;
             this.button2.Text = "Thông tin của tôi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -286,6 +287,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QLNV_TAICHINH";
             this.Text = "QLNV_TAICHINH";
+            this.Load += new System.EventHandler(this.QLNV_TAICHINH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

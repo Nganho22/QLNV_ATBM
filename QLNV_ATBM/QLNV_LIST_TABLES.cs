@@ -63,7 +63,7 @@ namespace QLNV_ATBM
             conn.Close();
             if (outputValue == "YES")
             {
-                QLNV_CREATE_ROLE USER = new QLNV_CREATE_ROLE(conn);
+                QLNV_LIST_ROLES USER = new QLNV_LIST_ROLES(conn);
                 this.Hide();
                 USER.ShowDialog();
             }

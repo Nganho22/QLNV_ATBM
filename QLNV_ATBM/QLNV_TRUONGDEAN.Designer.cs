@@ -67,6 +67,7 @@
             this.button2.TabIndex = 80;
             this.button2.Text = "Thông tin của tôi";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -318,6 +319,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QLNV_TRUONGDEAN";
             this.Text = "QLNV_TRUONGDEAN";
+            this.Load += new System.EventHandler(this.QLNV_TRUONGDEAN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

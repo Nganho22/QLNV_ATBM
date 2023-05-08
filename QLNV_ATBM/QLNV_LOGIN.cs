@@ -32,11 +32,35 @@ namespace QLNV_ATBM
             try
             {
                 conn = new OracleConnection(UconnectDBOracle);
+
                 conn.Open();
-                QLNV_MENU menu = new QLNV_MENU(conn);
-                this.Hide();
+                OracleCommand command = new OracleCommand();
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "NGAN.DA_PROC_CHECK_QTV";
+                command.Connection = conn;
+                command.Parameters.Add("p_output", OracleDbType.Varchar2, 100).Direction = ParameterDirection.Output;
+                command.ExecuteNonQuery();
+                string outputValue = command.Parameters["p_output"].Value.ToString();
                 conn.Close();
-                menu.ShowDialog();
+                if (outputValue == "QTV")
+                {
+                    QLNV_MENU menu = new QLNV_MENU(conn);
+                    this.Hide();
+                    conn.Close();
+                    menu.ShowDialog();
+                }
+                else if (outputValue == "NV")
+                {
+                    QLNV_NHANVIEN USER = new QLNV_NHANVIEN(conn);
+                    this.Hide();
+                    conn.Close();
+                    USER.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("YOU DON'T HAVE PERMISSION!");
+                }
+               
                 //MessageBox.Show("Dang nhap thanh cong!");
                 //conn.Close();
                 //this.Hide();
@@ -45,10 +69,7 @@ namespace QLNV_ATBM
             {
                 MessageBox.Show("ERROR!" + exp.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
