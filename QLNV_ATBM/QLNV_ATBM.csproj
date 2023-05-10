@@ -157,12 +157,6 @@
     <Compile Include="QLNV_DROP.Designer.cs">
       <DependentUpon>QLNV_DROP.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLNV_GIAMDOC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLNV_GIAMDOC.Designer.cs">
-      <DependentUpon>QLNV_GIAMDOC.cs</DependentUpon>
-    </Compile>
     <Compile Include="QLNV_LIST_ROLES.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,12 +186,6 @@
     </Compile>
     <Compile Include="QLNV_MENU.Designer.cs">
       <DependentUpon>QLNV_MENU.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QLNV_MYPC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QLNV_MYPC.Designer.cs">
-      <DependentUpon>QLNV_MYPC.cs</DependentUpon>
     </Compile>
     <Compile Include="QLNV_NHANSU.cs">
       <SubType>Form</SubType>
@@ -293,9 +281,6 @@
     <EmbeddedResource Include="QLNV_DROP.resx">
       <DependentUpon>QLNV_DROP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QLNV_GIAMDOC.resx">
-      <DependentUpon>QLNV_GIAMDOC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="QLNV_LIST_ROLES.resx">
       <DependentUpon>QLNV_LIST_ROLES.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,9 +295,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLNV_MENU.resx">
       <DependentUpon>QLNV_MENU.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QLNV_MYPC.resx">
-      <DependentUpon>QLNV_MYPC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLNV_NHANSU.resx">
       <DependentUpon>QLNV_NHANSU.cs</DependentUpon>

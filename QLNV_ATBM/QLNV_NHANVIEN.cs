@@ -122,6 +122,7 @@ namespace QLNV_ATBM
             command4.CommandText = "NGAN.DA_PROC_UPDATE_MY_INFO";
             command4.Connection = conn;
             command4.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
+            command4.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox2.Text;
             command4.Parameters.Add("p_input3", OracleDbType.Varchar2).Value = textBox3.Text;
             command4.ExecuteNonQuery();
             conn.Close();
@@ -181,6 +182,13 @@ namespace QLNV_ATBM
             {
                 MessageBox.Show("YOU DON'T HAVE PERMISSION!");
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            QLNV_NHANVIEN USER = new QLNV_NHANVIEN(conn);   
+            this.Hide();
+            USER.ShowDialog();
         }
     }
 }

@@ -56,5 +56,71 @@ namespace QLNV_ATBM
             this.Hide();
             USER.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QLNV_TAICHINH USER = new QLNV_TAICHINH(conn);
+            this.Hide();
+            USER.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.DA_PROC_U_TC_L";
+            command.Connection = conn;
+            command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
+            command.Parameters.Add("p_input2", OracleDbType.Varchar2).Value = textBox2.Text;
+            command.Parameters.Add("p_input3", OracleDbType.Varchar2).Value = textBox3.Text;
+            command.Parameters.Add("p_input4", OracleDbType.Varchar2).Value = textBox4.Text;
+            command.Parameters.Add("p_input5", OracleDbType.Varchar2).Value = textBox5.Text;
+            command.Parameters.Add("p_input6", OracleDbType.Varchar2).Value = textBox6.Text;
+
+            command.Parameters.Add("p_input7", OracleDbType.Varchar2).Value = textBox7.Text;
+            OracleCommand command2 = new OracleCommand("ALTER SESSION SET \"_ORACLE_SCRIPT\" = TRUE", conn);
+            command2.ExecuteNonQuery();
+            command.ExecuteNonQuery();
+            conn.Close();
+            QLNV_TAICHINH USER = new QLNV_TAICHINH(conn);
+            this.Hide();
+            USER.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

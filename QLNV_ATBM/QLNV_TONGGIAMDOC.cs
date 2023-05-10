@@ -64,5 +64,37 @@ namespace QLNV_ATBM
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QLNV_TONGGIAMDOC USER = new QLNV_TONGGIAMDOC(conn);
+                this.Hide();
+                USER.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            OracleCommand command = new OracleCommand();
+            command.CommandType = CommandType.StoredProcedure;
+            command.CommandText = "NGAN.DA_PROC_U_KEY";
+            command.Connection = conn;
+            command.Parameters.Add("p_input1", OracleDbType.Varchar2).Value = textBox1.Text;
+            command.Parameters.Add("p_output", OracleDbType.Varchar2, 200).Direction = ParameterDirection.Output;
+            OracleCommand command2 = new OracleCommand("ALTER SESSION SET \"_ORACLE_SCRIPT\" = TRUE", conn);
+            command2.ExecuteNonQuery();
+            command.ExecuteNonQuery();
+            string outputValue = command.Parameters["p_output"].Value.ToString();
+            MessageBox.Show(outputValue);
+            conn.Close();
+            QLNV_TONGGIAMDOC USER = new QLNV_TONGGIAMDOC(conn);
+            this.Hide();
+            USER.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

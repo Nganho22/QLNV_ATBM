@@ -56,5 +56,12 @@ namespace QLNV_ATBM
             this.Hide();
             USER.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QLNV_TRUONGDEAN USER = new QLNV_TRUONGDEAN(conn);
+            this.Hide();
+            USER.ShowDialog();
+        }
     }
 }

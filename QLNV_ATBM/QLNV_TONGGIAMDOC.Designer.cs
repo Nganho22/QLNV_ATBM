@@ -62,6 +62,7 @@
             this.button1.TabIndex = 110;
             this.button1.Text = "Vai trò của tôi";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -108,6 +109,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(432, 22);
             this.textBox1.TabIndex = 116;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button4
             // 
@@ -117,6 +119,7 @@
             this.button4.TabIndex = 117;
             this.button4.Text = "Thay đổi key";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView2
             // 
